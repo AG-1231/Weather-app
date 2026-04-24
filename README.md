@@ -1,2 +1,2 @@
 # Weather-app
-simple weather app
+This is a simple Python Weather App that generates realistic random weather for different locations without using the internet. Users can view weather for all five locations or choose one specific place, including Burlington, Toronto, India (New Delhi), USA (New York), and Antarctica. The program displays details such as temperature, feels-like temperature, humidity, wind speed, and weather conditions like snow, rain, or clear skies. This project helps practice Python concepts such as dictionaries, functions, loops, conditionals, random number generation, and user input.
