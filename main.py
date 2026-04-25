@@ -1,14 +1,11 @@
 import random
  
 
-# Weather App
 
- 
-# each location has a realistic temp range and likely conditions for it
 LOCATIONS = {
     "1": {
         "label": "Burlington, Canada",
-        "temp_range": (-5, 28),       # cold winters, warm summers
+        "temp_range": (-5, 28),       
         "humidity_range": (50, 85),
         "wind_range": (10, 45),
         "conditions": ["clear sky", "partly cloudy", "overcast", "light rain", "snow", "drizzle"]
@@ -22,7 +19,7 @@ LOCATIONS = {
     },
     "3": {
         "label": "India (New Delhi)",
-        "temp_range": (10, 45),       # gets really hot in summer
+        "temp_range": (10, 45),       
         "humidity_range": (20, 90),
         "wind_range": (5, 35),
         "conditions": ["clear sky", "mainly clear", "partly cloudy", "haze", "heavy rain", "thunderstorm"]
@@ -36,9 +33,9 @@ LOCATIONS = {
     },
     "5": {
         "label": "Antarctica",
-        "temp_range": (-70, -10),     # always freezing, no exceptions
+        "temp_range": (-70, -10),     
         "humidity_range": (40, 70),
-        "wind_range": (30, 150),      # brutal winds
+        "wind_range": (30, 150),      
         "conditions": ["clear sky", "blizzard", "heavy snow", "snow", "overcast", "freezing fog"]
     },
 }
@@ -47,7 +44,7 @@ LOCATIONS = {
 def generate_weather(location):
     """make up realistic weather numbers for a location"""
     temp       = round(random.uniform(*location["temp_range"]), 1)
-    feels_like = round(temp + random.uniform(-4, 2), 1)   # feels like is usually a bit lower
+    feels_like = round(temp + random.uniform(-4, 2), 1)   
     humidity   = random.randint(*location["humidity_range"])
     wind       = round(random.uniform(*location["wind_range"]), 1)
     condition  = random.choice(location["conditions"])
